@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+body {
+  position: relative;
+  padding: 20px 100px;
+  p,
+  button {
+    font-family: "Montserrat";
+  }
+  b {
+    font-family: "Philosopher";
+  }
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(220, 220, 220);
+}
+header b {
+  font-family: "Philosopher";
+  font-size: 48px;
+}
+main {
+  display: flex;
+}
+#check-bg {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#check {
+  display: none;
+  padding: 20px;
+  flex-direction: column;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  #check-logo {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+}
+.close {
+  cursor: pointer;
+  font-size: 36px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#items {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  max-height: 320px;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid black;
+  p {
+    margin: auto;
+    word-break: break-word;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  #img-parent {
+    margin: 0 auto;
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 200px;
+    max-width: 200px;
+  }
+  img {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+  }
+}
+.card:hover {
+  box-shadow: 6px 6px 1px rgba(0, 0, 0, 0.747);
+  transform: translateY(-5px);
+}
+button {
+  border: 1px solid black;
+  background-color: rgb(245, 245, 245);
+}
+.price-and-btn {
+  align-items: center;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  b {
+    margin-right: 10px;
+  }
+  .card-btn {
+    height: 35px;
+    width: 100%;
+  }
+}
+.card-price {
+  font-size: 24px;
+  line-height: 40px;
+}
+#cart {
+  flex-direction: column;
+  margin: 0 10px 0 10px;
+  display: none;
+  height: auto;
+  width: 40%;
+  background-color: antiquewhite;
+  outline: 1px solid black;
+}
+#cart-logo {
+  cursor: pointer;
+}
+#inner-cart {
+  padding: 20px;
+}
+.cart-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  p,
+  b {
+    font-size: 24px;
+  }
+  #img-parent {
+    margin: auto;
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 200px;
+    max-width: 200px;
+  }
+  img {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+  }
+}
+#cart-name_price_btn {
+  padding: 10px 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#cart-price_btn {
+  padding-top: 10px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  b {
+    width: 50px;
+  }
+}
+#btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    height: 35px;
+    width: 35px;
+    max-width: 100%;
+    align-items: center;
+    p {
+      font-size: 26px;
+    }
+  }
+}
+.count {
+  align-self: baseline;
+  font-weight: bold;
+  position: absolute;
+  font-size: 26px;
+}
+#total-price_confirm-order {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  display: none;
+  b {
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+#confirm-order {
+  font-size: 24px;
+  height: 60px;
+  width: 100%;
+}
+//////////////
+$codition: rgb(1, 1, 1);
+@mixin media(
+  $resolution,
+  $margin-padding,
+  $number-cards-in-row,
+  $size-text,
+  $padding,
+  $body-padding,
+  $header-text,
+  $size-btn,
+  $width-cart,
+  $check-size) {
+  @media (max-width: $resolution) {
+    body {
+      padding: $body-padding;
+    }
+    header {
+      b {
+        font-size: $header-text;
+      }
+    }
+    .card {
+      padding: $padding;
+      p,
+      b {
+        font-size: $size-text;
+      }
+    }
+    #cart {
+      width: $width-cart;
+    }
+    .card-btn {
+      font-size: calc($size-text - 2px);
+      height: $size-btn;
+    }
+    .cart-item {
+      p,
+      b {
+        font-size: $size-text;
+      }
+    }
+    #btns {
+      button {
+        height: $size-btn;
+        width: $size-btn;
+        p {
+          font-size: $size-text;
+        }
+      }
+    }
+    .count {
+      font-size: $size-text;
+    }
+
+    #total-price_confirm-order {
+      b {
+        font-size: calc($size-text + 4px);
+      }
+      button {
+        font-size: $size-text;
+      }
+      #confirm-order {
+        font-size: $size-text;
+      }
+    }
+    #inner-cart {
+      padding: $padding;
+    }
+    #check {
+      width: $check-size;
+    }
+  }
+}
+
+@include media(3840px, 60px, 7, default, default, default, default, default, default, default);
+@include media(2560px, 60px, 6, default, default, default, default, default, default, default);
+@include media(1920px, 60px, 5, default, default, default, default, 32px, default,  default);
+@include media(1500px, 60px, 4, 22px, default, default, 42px, 30px, 45%, default);
+@include media(1240px, 60px, 4, 20px, default, 20px 90px, 38px, 28px, 50%, default);
+@include media(1080px, 60px, 4, 18px, default, 20px 80px, 34px, 25px, 60%, default);
+@include media(980px, 60px, 4, 16px, default, 15px 70px,  30px,  25px, 70%, default);
+@include media(840px, 60px, 4, 14px, default, 15px 60px, 26px, 25px,75%, default);
+@include media(760px, 50px, 3, 14px, 15px, 15px 50px, 26px, 25px, 80%, default);
+@include media(660px, 40px, 3, 14px, 10px, 10px 40px, 26px, 25px, 85%, default);
+@include media(590px, 40px, 3, 14px, 10px, 10px 40px, 24px, 25px, 85%, 300px);
+@include media(554px, 40px, 2, 14px, 10px, 10px 30px, 22px, 25px, 90%, 260px);
+@include media(460px, 40px, 2, 14px, 10px, 10px 20px, 20px, 22px, 100%, 240px);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgers Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+
+  <body id="body">
+    <div id="check-bg"></div>
+    <header style="margin: 0 10px">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <b>Burgers</b>
+        <b id="cart-logo">Cart: 0</b>
+      </div>
+      <div class="line"></div>
+    </header>
+    <main>
+      <div id="items"></div>
+
+      <div id="cart">
+        <div id="inner-cart">
+          <div id="cart-items"></div>
+          <div id="total-price_confirm-order">
+            <b id="total-price">Total price:</b>
+            <button id="confirm-order">Confirm the order</button>
+          </div>
+        </div>
+      </div>
+
+        <div id="check">
+          <div class="close">X</div>
+          <div class="line"></div>
+          <b id="check-logo">Guest Check</b>
+          <div style="margin-bottom:10px" class="line"></div>
+          <div id="items-check">
+          </div>
+          <div style="margin:10px 0 20px 0" class="line"></div>
+          <div style="display: flex; justify-content: space-between;">
+            <b>TOTAL PRICE</b><b id="total-price-check"></b>
+          </div>
+          </div>
+    </main>
+   
+    <script src="script.js" type="module"></script>
+    <script src="items.js"></script>
+  </body>
+</html>
