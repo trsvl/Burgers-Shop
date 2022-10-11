@@ -1,5 +1,4 @@
-# Stack
-JS, HTML, SCSS.
+# Burgers Shop
 
 # Installation
 To get started, first clone the repository on your device using the command below:
