@@ -43,6 +43,10 @@ main {
   height: 100%;
 }
 
+#burgers-logo {
+cursor: pointer;
+}
+
 #check {
   display: none;
   padding: 20px;
